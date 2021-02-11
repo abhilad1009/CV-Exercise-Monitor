@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+    
+</head>
+
+<body>
+    <div id="console"></div>
+    <div class='media' style="height: 500;">
+        <video autoplay  muted width="600" height="500" id="webcam" ></video>
+        <canvas id="output" width="600" height="500"></canvas>
+    </div>
+    <br>
+    <div class="btn">
+        <button id='ctbutton' onclick="startsquat()">
+            Start
+        </button>
+        <button id='rstbutton' onclick="squatreset()">
+            Reset
+        </button>
+    </div>
+    <div class="text">
+        <h2 style="display:inline;" >Angle : </h2>
+        <h2 style="display:inline;" id="angle">.. </h2>
+    </div>
+    <div class="text">
+        <h2 style="display: inline;" >Squat count : </h2>
+        <h2 style="display: inline;" id="count">
+        .. 
+        </h2>
+    </div>
+    <div class="text">
+        <h2 style="display: inline;" >Make sure your left leg is facing the camera. </h2>
+
+    </div>
+    <!-- Load index.js after the content of the page -->
+    <script src="index.js"></script>
+</body>
+
+</html>
+
+<style>
+video{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    
+} 
+ canvas{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.media{
+    align-content: center;
+    text-align: center;
+}
+.btn{
+    align-content: center;
+    text-align: center;
+}
+.text{
+    align-content: center;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+</style>
